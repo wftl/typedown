@@ -287,7 +287,7 @@ class MainWindow(QMainWindow):
         )
         self._focus_act = self._act(
             view_menu, "&Focus Mode", self.toggle_focus,
-            "Ctrl+Shift+F", checkable=True,
+            checkable=True,
         )
         self._linenum_act = self._act(
             view_menu, "Show &Line Numbers", self.toggle_line_numbers,
