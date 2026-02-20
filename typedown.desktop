@@ -1,0 +1,14 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=TypeDown
+GenericName=Markdown Editor
+Comment=A beautiful, distraction-free markdown editor
+Exec=python3 /home/mgagne/Writing/TypeDown/typedown.py %F
+Icon=/home/mgagne/Writing/TypeDown/typedown.png
+Terminal=false
+Categories=Utility;TextEditor;
+MimeType=text/markdown;text/x-markdown;
+Keywords=markdown;editor;writing;notes;
+StartupNotify=true
+StartupWMClass=typedown
