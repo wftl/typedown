@@ -9,6 +9,7 @@ from PyQt6.QtWidgets import (
 )
 from PyQt6.QtCore import Qt, QSettings, QTimer
 from PyQt6.QtGui import QAction, QKeySequence, QColor, QPalette
+from PyQt6.QtWidgets import QShortcut
 
 from .editor import MarkdownEditor
 from .preview import PreviewWidget
@@ -188,6 +189,10 @@ class MainWindow(QMainWindow):
         self._build_statusbar()
         self._restore_state()
         self._apply_theme()
+
+        # Window-level shortcut so Ctrl+Shift+F works even when the menu bar
+        # is hidden in focus mode (menu actions go dead when their bar hides).
+        QShortcut(QKeySequence("Ctrl+Shift+F"), self).activated.connect(self.toggle_focus)
 
         self.setWindowTitle("TypeDown")
         self.resize(1280, 820)
