@@ -9,7 +9,7 @@ from PyQt6.QtWidgets import (
 )
 from PyQt6.QtCore import Qt, QSettings, QTimer
 from PyQt6.QtGui import QAction, QKeySequence, QColor, QPalette
-from PyQt6.QtWidgets import QShortcut
+from PyQt6.QtGui import QShortcut
 
 from .editor import MarkdownEditor
 from .preview import PreviewWidget
